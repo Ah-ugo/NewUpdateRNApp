@@ -38,7 +38,13 @@ export default function DescribeMeal({ navigation }) {
         </Text>
         <Text style={styles.instruction}>Any special instructions?</Text>
         <View style={styles.btnView}>
-          <Button title="Submit recipe" color="#26C867" />
+          <Button
+            title="Submit recipe"
+            color="#26C867"
+            onPress={() => {
+              navigation.navigate("Detail");
+            }}
+          />
         </View>
       </View>
     </ScrollView>
