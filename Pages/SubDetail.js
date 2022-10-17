@@ -2,6 +2,8 @@ import { Image, ScrollView, StyleSheet, Text, View } from "react-native";
 import React from "react";
 import { LinearGradient } from "expo-linear-gradient";
 import Ionicons from "@expo/vector-icons/Ionicons";
+import PACard from "../Components/PACard";
+import PrefCard from "../Components/PrefCard";
 
 export default function SubDetail() {
   return (
@@ -54,6 +56,24 @@ export default function SubDetail() {
             </View>
           </View>
         </LinearGradient>
+      </View>
+      <View style={styles.paContainer}>
+        <Text style={styles.paText}>Personal assistance</Text>
+        <View>
+          <PACard
+            title="Dietician"
+            name="Amanda Sarah"
+            phone="+234-818-360-9852"
+            mail="amandasarah@oomasupport.com"
+          />
+          <PACard
+            title="Customer Care Rep"
+            name="Chiamaka Orji"
+            phone="+234-818-360-9852"
+            mail="chiamaka@oomasupport.com"
+          />
+          <PrefCard />
+        </View>
       </View>
     </ScrollView>
   );
@@ -168,5 +188,13 @@ const styles = StyleSheet.create({
   mainGradient: {
     borderBottomRightRadius: 27,
     borderBottomLeftRadius: 27,
+  },
+  paText: {
+    fontWeight: "900",
+    fontSize: 20,
+  },
+  paContainer: {
+    marginLeft: 20,
+    marginRight: 20,
   },
 });
