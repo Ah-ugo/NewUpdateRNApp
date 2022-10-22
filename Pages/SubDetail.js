@@ -4,6 +4,7 @@ import { LinearGradient } from "expo-linear-gradient";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import PACard from "../Components/PACard";
 import PrefCard from "../Components/PrefCard";
+import Seperator from "../Components/Seperator";
 
 export default function SubDetail() {
   return (
@@ -73,6 +74,51 @@ export default function SubDetail() {
             mail="chiamaka@oomasupport.com"
           />
           <PrefCard />
+          <View style={styles.seperate}>
+            <Seperator />
+          </View>
+        </View>
+        <View style={styles.phoneflex}>
+          <Text style={styles.phoneTxt}>Phone number</Text>
+          <Text style={styles.phoneNo}>+2348122776780</Text>
+        </View>
+        <View style={styles.addresslabelBg}>
+          <Text style={styles.addressLabel}>SAVED ADDRESSES</Text>
+        </View>
+        <View style={styles.addressIconTxt}>
+          <Image
+            source={require("../assets/send.png")}
+            style={styles.addressIcon}
+          />
+          <View>
+            <Text style={styles.addressTxt}>
+              No. 290 Agbani road, Awknanaw, Enugu
+            </Text>
+          </View>
+        </View>
+        <View style={styles.viewAllContainer}>
+          <Text style={styles.viewAllTxt}>View all</Text>
+          <Seperator />
+        </View>
+        <View>
+          <View style={styles.footIconTxt}>
+            <Ionicons
+              style={styles.footIcon}
+              name="refresh-circle-outline"
+              size={20}
+            />
+            <Text style={styles.footTxt}>History</Text>
+          </View>
+          <View style={styles.footIconTxt}>
+            <Ionicons style={styles.footIcon} name="people" size={20} />
+            <Text style={styles.footTxt}>Invite a friend</Text>
+          </View>
+          <View style={styles.footIconTxt}>
+            <Ionicons style={styles.footIcon} name="person-remove" size={20} />
+            <Text style={styles.footTxt}>Log out</Text>
+          </View>
+
+          <Text style={styles.footMore}>More</Text>
         </View>
       </View>
     </ScrollView>
@@ -196,5 +242,90 @@ const styles = StyleSheet.create({
   paContainer: {
     marginLeft: 20,
     marginRight: 20,
+  },
+  seperate: {
+    marginBottom: 38,
+  },
+  phoneflex: {
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+  },
+  phoneTxt: {
+    fontWeight: "900",
+    fontSize: 18,
+  },
+  phoneNo: {
+    fontWeight: "300",
+    fontSize: 16,
+  },
+  addresslabelBg: {
+    backgroundColor: "#F6F6F6",
+    borderRadius: 4,
+  },
+  addressLabel: {
+    fontWeight: "800",
+    fontSize: 14,
+    color: "#C4C4C4",
+    padding: 13,
+  },
+  addressIconTxt: {
+    display: "flex",
+    flexDirection: "row",
+    // justifyContent: "space-between",
+    alignItems: "center",
+    backgroundColor: "#F8FFEF",
+    borderRadius: 5,
+    marginTop: 12,
+  },
+  addressTxt: {
+    fontWeight: "700",
+    fontSize: 14,
+    lineHeight: 19,
+    paddingTop: 12,
+    paddingBottom: 12,
+    color: "#C4C4C4",
+    marginRight: 92,
+  },
+  addressIcon: {
+    marginLeft: 20,
+    marginRight: 20,
+    marginTop: 20,
+    marginBottom: 20,
+  },
+  viewAllTxt: {
+    fontWeight: "900",
+    fontSize: 16,
+    lineHeight: 22,
+    marginTop: 16,
+    marginBottom: 39,
+    color: "#26C867",
+  },
+  viewAllContainer: {
+    marginBottom: 24,
+  },
+  footTxt: {
+    fontWeight: "700",
+    fontSize: 18,
+    lineHeight: 25,
+    marginBottom: 34,
+  },
+  footIconTxt: {
+    display: "flex",
+    flexDirection: "row",
+    // alignItems: "center",
+    // justifyContent: "center",
+    alignContent: "center",
+  },
+  footIcon: {
+    // backgroundColor: "#1F1F1F",
+  },
+  footMore: {
+    fontWeight: "700",
+    fontSize: 18,
+    lineHeight: 25,
+    marginBottom: 29,
+    color: "#1F1F1F",
   },
 });
